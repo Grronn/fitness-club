@@ -1,0 +1,135 @@
+@media screen and (min-width: 600px) {
+    body {
+        margin:0;     
+    }
+    .full{
+        display: flex;
+        height:100%;
+        width:100%;
+        flex-direction: column;
+    }
+
+    .appclass{
+        width: 100%;
+        height: 100%;
+    }
+    #root{
+        width: 100%;
+        height: 100vh;
+        
+
+    }
+
+    .full div:nth-child(1){
+        
+        flex: 10%; 
+      
+    }
+    .full div:nth-child(2){
+        
+        flex: 80%; 
+      
+    }
+    .full div:nth-child(3){
+        
+        flex: 10%; 
+    
+    }
+    
+    .header {
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        background-color:rgb(96, 110, 235);
+        height:10%;
+        float:left;
+        color: rgb(223, 224, 247);
+        font-family: sans-serif;
+        
+    }
+    .header div:nth-child(1){
+        line-height: 5em;
+        flex: 10%; 
+        text-align: center;
+        
+      
+    }
+    .header div:nth-child(2){
+        line-height: 5em;
+        flex: 30%; 
+        text-align: center;
+        font-weight: bold;
+    }
+    .header div:nth-child(3){
+        line-height: 5em;
+        flex: 30%; 
+        text-align: center;
+        font-weight: bold;
+    }
+    .header div:nth-child(4){
+        line-height: 5em;
+        flex: 30%; 
+        text-align: center;
+        font-weight: bold;
+    }
+    .middle {   
+        width:100%;      
+        height:80%;
+        float:left;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: row;
+    }
+    .news1{
+        width: 15%;
+        height: 15%;
+        background-color: coral;
+        margin: 1%;
+        text-align: center;
+    }
+    .news2{
+        width: 15%;
+        height: 15%;
+        background-color:darkcyan;
+        margin: 1%;
+        text-align: center;
+    }
+    .news1text{
+        padding-top: 40px;
+    }
+    .news2text{
+        padding-top: 40px;
+    }
+    .footer {
+        width:100%;
+        background-color:rgb(96, 110, 235);
+        height:10%;
+        float:left;
+        color:brown;
+        font-family: sans-serif;
+    }
+    .logo{
+        content:url("./логотип.png");
+        width: 50px;
+        height: 50px;
+        padding: 20px;
+    }
+    .address{
+        
+        text-align: right;
+        font-weight: bold;
+        margin-right: 20px;
+        margin-top: 35px;
+
+    }
+    
+    	
+    a { 
+        text-decoration: none; 
+        color: rgb(223, 224, 247);
+    }
+    }
+    @media screen and (max-width: 1400px) {
+    
+    
+    }
