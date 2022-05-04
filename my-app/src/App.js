@@ -1,12 +1,13 @@
 
 import React from 'react';
-import Ccomponent from './components/Ccomponent';
+import Header from './components/Header';
 
-import Cc2 from './components/Cc2';
-import Cc3 from './components/Cc3';
+import Main from './components/MainPage';
+import Footer from './components/Footer';
 import './styles/mycss.css';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import Main from './components/Main';
+import Raspisanie from './components/Raspisanie';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -15,16 +16,16 @@ function App() {
       <Router>
       
           <div className='appclass'>
-            <Ccomponent/>
+            <Header/>
              
 
               
                 <Routes>
-                  <Route path="/" element={<Cc2 />}/>
-                  <Route path="/timesheet" element={<Main />}/>
+                  <Route path="/" element={<Main />}/>
+                  <Route path="/timesheet" element={<Raspisanie />}/>
                 </Routes>
               
-            <Cc3/>
+            <Footer/>
           </div>
         </Router>
 
