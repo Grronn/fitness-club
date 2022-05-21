@@ -17,7 +17,7 @@ const NavBar = observer(() => {
         <Navbar bg="secondary" variant="dark">
             <Container>
                 <NavLink style={{textDecoration: 'none', color:'white'}} to={MAIN}>Fitness</NavLink>
-                <NavLink style={{textDecoration: 'none', color:'white'}} to={TYPE_ROUTE}>Типы</NavLink>
+                <NavLink style={{textDecoration: 'none', color:'white'}} to={TYPE_ROUTE}>Абонементы</NavLink>
                 <NavLink style={{textDecoration: 'none', color:'white'}} to={SPEC_ROUTE}>Специалисты</NavLink>
                 <NavLink style={{textDecoration: 'none', color:'white'}} to={GRAPH}>График</NavLink>
                 {user.isAuth ?

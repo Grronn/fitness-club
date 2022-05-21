@@ -43,7 +43,7 @@ const CreatType = ({show, onHide}) => {
                     className="mt-2"
                     value={value2}
                     onChange={e => setValue2(e.target.value)}
-                    placeholder={"Введите название типа"}
+                    placeholder={"Введите стоимость"}
                     type="number"
                     />
                     <hr/>
