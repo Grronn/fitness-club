@@ -38,32 +38,38 @@ const CreatSpec = ({show, onHide}) => {
             <Modal.Body>
                 <Form>
                     <Form.Control
+                        className="mt-2"
                         value={value}
                         onChange={e => setValue(e.target.value)}
                         placeholder={"Введите имя"}
                     />
 
                     <Form.Control
+                        className="mt-2"
                         value={value2}
                         onChange={e => setValue2(e.target.value)}
                         placeholder={"Введите фамилию"}
                     />
                     <Form.Control
+                        className="mt-2"
                         value={value3}
                         onChange={e => setValue3(e.target.value)}
                         placeholder={"Введите отчество"}
                     />
                     <Form.Control
+                        className="mt-2"
                         value={value4}
                         onChange={e => setValue4(e.target.value)}
                         placeholder={"Введите дату рождения"}
                     />
                     <Form.Control
+                        className="mt-2"
                         value={value5}
                         onChange={e => setValue5(e.target.value)}
                         placeholder={"Введите специальность"}
                     />
                     <Form.Control
+                        className="mt-2"
                         value={value6}
                         onChange={e => setValue6(e.target.value)}
                         placeholder={"Введите номер телефона"}

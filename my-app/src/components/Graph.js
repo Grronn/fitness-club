@@ -34,11 +34,11 @@ const Graph = () => {
                 barSize={20}
             >
                 <XAxis dataKey="name"  padding={{left: 10, right: 10}}/>
-                <YAxis/>
+                <YAxis dataKey="cost"  padding={{left: 10, right: 10}}/>
                 <Tooltip/>
                 <Legend/>
                 <CartesianGrid strokeDasharray="3 3"/>
-                <Bar dataKey="count" fill="#8884d8" background={{fill: "#eee"}}/>
+                <Bar dataKey="cost" fill="#8884d8" background={{fill: "#eee"}}/>
             </BarChart>
         </Container>
         

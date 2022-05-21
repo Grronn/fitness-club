@@ -33,12 +33,14 @@ const CreatType = ({show, onHide}) => {
             <Modal.Body>
                 <Form>
                     <Form.Control
+                    className="mt-2"
                     value={value}
                     onChange={e => setValue(e.target.value)}
                     placeholder={"Введите название типа"}
                     />
 
                     <Form.Control
+                    className="mt-2"
                     value={value2}
                     onChange={e => setValue2(e.target.value)}
                     placeholder={"Введите название типа"}

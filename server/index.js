@@ -5,6 +5,7 @@ const sequelize = require('./db')
 const cors = require("cors");
 
 const router = require('./routes/index')
+const path =require("path")
 
 const PORT=process.env.PORT || 5000;
 const app = express();
@@ -12,6 +13,12 @@ const errorHandler=require('./middleware/ErrorHandlingMiddleware')
 app.use(cors());
 app.use(express.json());
 
+if(process.env.NODE_ENV==="production"){
+  app.use(express.static(path.join(__dirname, "my-app/public")))
+}
+
+console.log(__dirname)
+console.log(path.join(__dirname, "my-app/public"))
 app.use(router);
 
 
