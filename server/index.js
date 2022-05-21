@@ -12,7 +12,7 @@ const app = express();
 const errorHandler=require('./middleware/ErrorHandlingMiddleware')
 app.use(cors());
 app.use(express.json());
-
+app.use("/",express.static("./my-app/public"))
 if(process.env.NODE_ENV==="production"){
   app.use(express.static(path.join(__dirname, "my-app/public")))
 }
