@@ -16,6 +16,21 @@ class TypesOfAbonCont{
         }
 
     }
+    async getTypeAb (req,res, next){
+
+
+        try {
+            const { id } = req.params;
+            const result = await pool.query('SELECT * FROM typesofcards WHERE id = $1', [id])
+            if (result.rowCount === 0)
+                return res.status(404).json({ message: "typesofcard not found234" });
+            res.json(result.rows);
+
+        } catch (error) {
+            next(error);
+        }
+
+    }
 
     async postTypesAb(req, res, next) {
         try {

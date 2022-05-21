@@ -1,15 +1,17 @@
 const Router = require('express')
 const router = new Router()
 const typesAbController = require('../controllers/typesOfAbonCont')
+const checkrole = require('../middleware/checkRoleMiddleware')
 
 
-router.get('/gettab',typesAbController.getTypesAb)
+router.get('/',typesAbController.getTypesAb)
+router.get('/:id',typesAbController.getTypeAb)
 
 
-router.post('/posttab',typesAbController.postTypesAb )
+router.post('/', checkrole('admin'),typesAbController.postTypesAb )
 
-router.put('/puttab/:id',typesAbController.putTypeAb )
+router.put('/', checkrole('admin'),typesAbController.putTypeAb )
 
-router.delete('/deletetab/:id',typesAbController.deleteTypeAb )
+router.delete('/:id', checkrole('admin'),typesAbController.deleteTypeAb )
 
 module.exports = router
