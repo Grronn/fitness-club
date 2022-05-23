@@ -20,6 +20,9 @@ const TypePage = () => {
     useEffect(() => {
         fetchOneType(id).then(data=>setType(data))
     }, [])
+    const Cancel = () => {
+    
+        };
 
     
     
@@ -43,7 +46,8 @@ const TypePage = () => {
                             <Button 
                             variant={"outline-dark"} 
                             className="mt-4 p-2"
-                            onClick={() => setTypeVisible(true)}
+                            onClick={() => setTypeVisible(true)
+                            }                           
                         >
                             Изменить
                         </Button>
@@ -52,9 +56,7 @@ const TypePage = () => {
                             className="mt-4 p-2"
                             onClick={() => deleteType(id).then(data => {
                                 console.log(data)
-                                history.push(TYPE_ROUTE)
-                                
-                                
+                                history.push(TYPE_ROUTE)                                                              
                             })}
                         >
                             Удалить

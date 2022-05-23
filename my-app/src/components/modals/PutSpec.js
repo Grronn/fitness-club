@@ -2,15 +2,17 @@ import React  from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
-import { useParams } from 'react-router-dom/cjs/react-router-dom';
+import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom';
 import { Context } from '../..';
 import { putSpec } from '../../http/specAPI';
 import { createType, putType } from '../../http/typeAPI';
+import { SPEC_ROUTE } from '../../utils/consts';
 
 
 
 
 const PutSpec = ({show, onHide}) => {
+    const history = useHistory()
     const [value, setValue] = useState('')
     const [value2, setValue2] = useState('')
     const [value3, setValue3] = useState('')
@@ -28,6 +30,7 @@ const PutSpec = ({show, onHide}) => {
             setValue5('')
             setValue6('')
             onHide()
+            history.push(SPEC_ROUTE) 
             console.log(data)      
         })
     }

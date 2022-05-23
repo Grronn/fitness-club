@@ -19,6 +19,7 @@ const PutType = ({show, onHide}) => {
             setValue2('')
             onHide()
             
+            
         })
     }
     return (

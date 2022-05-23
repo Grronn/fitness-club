@@ -2,9 +2,10 @@ import React  from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
-import { useParams } from 'react-router-dom/cjs/react-router-dom';
+import { useHistory, useParams } from 'react-router-dom/cjs/react-router-dom';
 import { Context } from '../..';
 import { createType, putType } from '../../http/typeAPI';
+import { TYPE_ROUTE } from '../../utils/consts';
 
 
 
@@ -12,12 +13,14 @@ import { createType, putType } from '../../http/typeAPI';
 const PutType = ({show, onHide}) => {
     const [value, setValue] = useState('')
     const [value2, setValue2] = useState('')
+    const history = useHistory()
     const {id}=useParams()
     const addType = () => {
         putType(id,value,value2).then(data => {
             setValue('')
             setValue2('')
             onHide()
+            history.push(TYPE_ROUTE)  
             console.log(data)      
         })
     }
